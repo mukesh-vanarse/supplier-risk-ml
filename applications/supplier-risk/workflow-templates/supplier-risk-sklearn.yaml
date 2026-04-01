@@ -5,14 +5,17 @@ metadata:
   labels:
     scenario: supplier-risk-sklearn
 spec:
-  image:
-    name: ghcr.io/mukesh-vanarse/supplier-risk-ml/supplier-risk-sklearn:1.0
-  cmd: []
-  args: []
-  resources:
-    limits:
-      cpu: "1"
-      memory: "2Gi"
-    requests:
-      cpu: "0.5"
-      memory: "1Gi"
+  template:
+    spec:
+      containers:
+        - name: inference
+          image: ghcr.io/mukesh-vanarse/supplier-risk-ml/supplier-risk-sklearn:1.0
+          command: []
+          args: []
+          resources:
+            limits:
+              cpu: "1"
+              memory: "2Gi"
+            requests:
+              cpu: "0.5"
+              memory: "1Gi"
