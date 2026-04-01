@@ -1,0 +1,8 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Application
+metadata:
+  name: supplier-risk-ml
+spec:
+  scenarios:
+    - name: supplier-risk
+      description: Supplier risk scoring ML model
