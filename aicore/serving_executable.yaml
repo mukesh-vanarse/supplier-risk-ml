@@ -1,0 +1,10 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: ServingExecutable
+metadata:
+  name: supplier-risk-serve
+  scenario: supplier-risk
+spec:
+  image: <YOUR_DOCKER_IMAGE>
+  resourcePlan: infer.sm
+  ports:
+    - containerPort: 8080
